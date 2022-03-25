@@ -9,6 +9,12 @@ const Jobs = () => {
       salary: 59000,
       link: "https://google.com",
     },
+    {
+      company: "Not llewellyn",
+      role: "Junior Ruby on Rails Developer",
+      salary: 123000,
+      link: "https://google.com",
+    },
   ];
 
   return (
