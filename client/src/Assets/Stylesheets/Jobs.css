@@ -1,0 +1,8 @@
+.jobs {
+  background-color: rgb(163, 163, 255);
+  height: 94vh;
+  width: 75vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

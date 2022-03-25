@@ -1,5 +1,11 @@
+import "../../Assets/Stylesheets/Jobs.css";
+
 const Jobs = () => {
-  return <h1>Jobs</h1>;
+  return (
+    <div className="jobs">
+      <h1>Jobs</h1>
+    </div>
+  );
 };
 
 export default Jobs;
