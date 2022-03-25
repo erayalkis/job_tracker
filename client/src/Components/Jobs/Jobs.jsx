@@ -12,11 +12,14 @@ const Jobs = () => {
   ];
 
   return (
-    <div className="jobs">
-      <h1>Jobs</h1>
-      {jobs.map((job_data) => (
-        <Job {...job_data} />
-      ))}
+    <div className="jobs-container">
+      <h1 className="jobs-header">Jobs</h1>
+
+      <div className="jobs">
+        {jobs.map((job_data) => (
+          <Job {...job_data} />
+        ))}
+      </div>
     </div>
   );
 };

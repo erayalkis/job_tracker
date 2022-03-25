@@ -1,3 +1,5 @@
+import "../../Assets/Stylesheets/Job.css";
+
 const Job = ({ company, role, salary, link }) => {
   return (
     <div className="job">
