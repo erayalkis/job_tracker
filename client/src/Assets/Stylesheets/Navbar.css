@@ -2,4 +2,16 @@
   background-color: red;
   width: 75vw;
   height: 6vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-logo {
+  padding: 5px;
+  border-right: 1px solid black;
+}
+
+.navbar-settings {
+  padding: 10px;
 }
