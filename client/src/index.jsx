@@ -1,3 +1,4 @@
+import "./Assets/Stylesheets/Index.css";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Components/Home/Home.jsx";
 import { render } from "react-dom";
