@@ -7,7 +7,7 @@ const Job = ({ company, role, salary, link }) => {
         <h1>{company}</h1>
       </a>
       <h2 className="job-role">{role}</h2>
-      <h2 className="job-salary">{salary}</h2>
+      <h2 className="job-salary">${salary}</h2>
     </div>
   );
 };
