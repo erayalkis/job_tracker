@@ -22,3 +22,13 @@
   text-align: right;
   padding-right: 10px;
 }
+
+.job-mini {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  background-color: pink;
+  margin-bottom: 10px;
+  font-size: 0.4em;
+}

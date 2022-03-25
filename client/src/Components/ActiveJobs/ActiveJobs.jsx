@@ -15,7 +15,7 @@ const ActiveJobs = () => {
     <div className="active-jobs">
       <h1 className="active-jobs-header">Active Jobs</h1>
       {activeJobs.map((job_data) => (
-        <Job {...job_data} />
+        <Job {...job_data} mini />
       ))}
     </div>
   );
