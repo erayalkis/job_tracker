@@ -19,7 +19,7 @@ const Jobs = () => {
 
   return (
     <div className="jobs-container">
-      <h1 className="jobs-header">Jobs</h1>
+      <h1 className="jobs-header">Saved Jobs</h1>
 
       <div className="jobs">
         {jobs.map((job_data) => (

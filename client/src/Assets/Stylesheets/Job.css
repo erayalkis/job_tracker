@@ -5,6 +5,7 @@
   width: 95%;
   background-color: pink;
   margin-bottom: 10px;
+  padding: 15px;
 }
 
 .job-company {
@@ -30,5 +31,21 @@
   width: 90%;
   background-color: pink;
   margin-bottom: 10px;
-  font-size: 0.4em;
+  padding: 15px;
+}
+
+.job-mini .job-company {
+  width: 300px;
+  padding-left: 10px;
+  font-size: 0.5em;
+}
+
+.job-mini .job-role {
+  width: 300px;
+  font-size: 0.77em;
+}
+
+.job-mini .job-salary {
+  width: 200px;
+  font-size: 0.77em;
 }
