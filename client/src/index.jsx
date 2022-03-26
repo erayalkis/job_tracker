@@ -3,6 +3,7 @@ import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Components/Home/Home.jsx";
 import { render } from "react-dom";
 import Navbar from "./Components/Navbar/Navbar.jsx";
+import { useState } from "react";
 
 const App = () => {
   return (

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "../../Assets/Stylesheets/Job.css";
 
 const Job = ({ id, company, role, pay, link, mini, setJobs }) => {

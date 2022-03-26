@@ -20,19 +20,21 @@ const JobModal = ({ setViewModal, setJobs }) => {
       method: "POST",
       body: JSON.stringify(job_data),
       headers,
-    }).then(() => {
-      for (let i = 0; i < 5; i++) {
-        targets[i].value = "";
-      }
+    })
+      .then((res) => {
+        for (let i = 0; i < 5; i++) {
+          targets[i].value = "";
+        }
 
-      setJobs((old) => [...old, job_data.job]);
-    });
+        return res.json();
+      })
+      .then((res) => setJobs((old) => [...old, res]));
   };
 
   const handleClick = () => setViewModal((old) => false);
 
   return (
-    <div className="job-modal" onClick={handleClick}>
+    <div className="job-modal">
       <div className="job-modal-content">
         <h1 className="job-modal-close" onClick={handleClick}>
           X
