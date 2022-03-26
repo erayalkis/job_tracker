@@ -1,8 +1,15 @@
+import { useState, useEffect } from "react";
 import "../../Assets/Stylesheets/Jobs.css";
 import Job from "../Job/Job";
 
 const Jobs = () => {
-  const jobs = [];
+  const [jobs, setJobs] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:3000/jobs")
+      .then((res) => res.json())
+      .then((res) => setJobs(res));
+  }, []);
 
   return (
     <div className="jobs-container">
