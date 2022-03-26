@@ -2,29 +2,16 @@ import "../../Assets/Stylesheets/Jobs.css";
 import Job from "../Job/Job";
 
 const Jobs = () => {
-  const jobs = [
-    {
-      company: "Llewellyn",
-      role: "Software Engineer",
-      salary: 59000,
-      link: "https://google.com",
-    },
-    {
-      company: "Not llewellyn",
-      role: "Junior Ruby on Rails Developer",
-      salary: 123000,
-      link: "https://google.com",
-    },
-  ];
+  const jobs = [];
 
   return (
     <div className="jobs-container">
       <h1 className="jobs-header">Saved Jobs</h1>
 
       <div className="jobs">
-        {jobs.map((job_data) => (
-          <Job {...job_data} />
-        ))}
+        {jobs.length > 0 && jobs.map((job_data) => <Job {...job_data} />)}
+
+        {!jobs.length && <h1>No saved jobs! :(</h1>}
       </div>
     </div>
   );
