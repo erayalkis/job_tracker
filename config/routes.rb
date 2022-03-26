@@ -3,9 +3,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-
-  get "/jobs", to: "jobs#index"
-  post "/jobs", to: "jobs#create"
+  resources :jobs
 
   namespace :api do
     get "/active_jobs", to: "jobs_api#active"

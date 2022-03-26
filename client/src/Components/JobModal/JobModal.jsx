@@ -1,6 +1,6 @@
 import "../../Assets/Stylesheets/JobModal.css";
 
-const JobModal = ({ setViewModal }) => {
+const JobModal = ({ setViewModal, setJobs }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const targets = [...e.currentTarget.children];
@@ -24,13 +24,15 @@ const JobModal = ({ setViewModal }) => {
       for (let i = 0; i < 5; i++) {
         targets[i].value = "";
       }
+
+      setJobs((old) => [...old, job_data.job]);
     });
   };
 
   const handleClick = () => setViewModal((old) => false);
 
   return (
-    <div className="job-modal">
+    <div className="job-modal" onClick={handleClick}>
       <div className="job-modal-content">
         <h1 className="job-modal-close" onClick={handleClick}>
           X

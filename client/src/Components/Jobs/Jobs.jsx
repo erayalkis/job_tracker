@@ -1,20 +1,7 @@
-import { useState, useEffect } from "react";
 import "../../Assets/Stylesheets/Jobs.css";
 import Job from "../Job/Job";
 
-const Jobs = () => {
-  const [jobs, setJobs] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    fetch("http://localhost:3000/jobs")
-      .then((res) => res.json())
-      .then((res) => {
-        setJobs(res);
-        setLoading(false);
-      });
-  }, []);
-
+const Jobs = ({ jobs, setJobs, loading }) => {
   return (
     <div className="jobs-container">
       <h1 className="jobs-header">Saved Jobs</h1>
@@ -23,7 +10,9 @@ const Jobs = () => {
         {loading ? (
           <h1>Fetching data...</h1>
         ) : jobs.length ? (
-          jobs.map((job_data) => <Job {...job_data} key={job_data["id"]} />)
+          jobs.map((job_data) => (
+            <Job {...job_data} key={job_data["id"]} setJobs={setJobs} />
+          ))
         ) : (
           !jobs.length && <h1>No saved jobs! :(</h1>
         )}
