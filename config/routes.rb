@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   get "/jobs", to: "jobs#index"
+  post "/jobs", to: "jobs#create"
 
   namespace :api do
     get "/active_jobs", to: "jobs_api#active"

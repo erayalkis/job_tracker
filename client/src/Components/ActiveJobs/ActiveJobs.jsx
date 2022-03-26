@@ -21,7 +21,9 @@ const ActiveJobs = () => {
       {loading ? (
         <h3>Fetching data...</h3>
       ) : activeJobs.length ? (
-        activeJobs.map((job_data) => <Job {...job_data} mini />)
+        activeJobs.map((job_data) => (
+          <Job {...job_data} key={job_data["id"]} mini />
+        ))
       ) : (
         <h1>No active jobs! :(</h1>
       )}

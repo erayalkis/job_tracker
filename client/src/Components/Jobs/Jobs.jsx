@@ -23,7 +23,7 @@ const Jobs = () => {
         {loading ? (
           <h1>Fetching data...</h1>
         ) : jobs.length ? (
-          jobs.map((job_data) => <Job {...job_data} />)
+          jobs.map((job_data) => <Job {...job_data} key={job_data["id"]} />)
         ) : (
           !jobs.length && <h1>No saved jobs! :(</h1>
         )}
