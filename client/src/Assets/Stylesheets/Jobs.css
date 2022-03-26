@@ -1,7 +1,9 @@
 .jobs-container {
-  height: 94vh;
+  height: 100vh;
   width: 75vw;
   overflow-y: scroll;
+  background-color: rgb(250, 250, 250);
+  padding-top: 60px;
 }
 
 .jobs {
@@ -14,4 +16,10 @@
 .jobs-header {
   padding: 20px;
   text-align: center;
+  height: 10%;
+  border-bottom: 1px solid black;
+  margin-bottom: 20px;
+  width: 50%;
+  margin-right: auto;
+  margin-left: auto;
 }

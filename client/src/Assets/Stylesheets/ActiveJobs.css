@@ -9,6 +9,8 @@
   flex-direction: column;
   align-items: center;
   overflow-y: scroll;
+  z-index: 2;
+  background-color: rgb(250, 250, 250);
 }
 
 .active-jobs-header {
