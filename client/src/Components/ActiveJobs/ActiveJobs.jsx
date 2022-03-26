@@ -5,7 +5,7 @@ const ActiveJobs = () => {
   const activeJobs = [
     {
       company: "Not llewellyn",
-      role: "Backend developer",
+      role: "Junior Ruby on Rails Developer",
       salary: 123000,
       link: "https://google.com",
     },
