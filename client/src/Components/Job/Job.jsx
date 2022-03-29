@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "../../Assets/Stylesheets/Job.css";
 
 const Job = ({ id, company, role, pay, link, mini, setJobs }) => {
@@ -8,10 +7,19 @@ const Job = ({ id, company, role, pay, link, mini, setJobs }) => {
     });
   };
 
+  const handleDrag = (e) => {
+    fetch(`http://localhost:3000/jobs/${id}`, {
+      method: "PATCH",
+      body: JSON.stringify({ status: "ACTIVE" }),
+    });
+  };
+
   return (
     <div
       className={"job" + (mini ? "-mini" : "")}
       onDoubleClick={handleDoubleClick}
+      draggable
+      onDragEnd={handleDrag}
     >
       <a href={link} target="-_blank" className="job-company">
         <h1>{company}</h1>
