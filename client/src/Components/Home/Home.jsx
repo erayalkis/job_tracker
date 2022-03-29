@@ -3,7 +3,7 @@ import ActiveJobs from "../ActiveJobs/ActiveJobs";
 import JobButton from "../JobButton/JobButton";
 import JobModal from "../JobModal/JobModal";
 import { useState, useEffect } from "react";
-import { useMemo } from "react/cjs/react.development";
+import { useMemo } from "react";
 
 const Home = () => {
   const [viewModal, setViewModal] = useState(false);
