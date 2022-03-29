@@ -42,10 +42,10 @@ const JobModal = ({ setViewModal, setJobs }) => {
         <h1>Add a new job:</h1>
         <div className="job-form-container">
           <form className="job-form" onSubmit={handleSubmit}>
-            <input type="text" placeholder="Company..." />
-            <input type="text" placeholder="Role..." />
-            <input type="text" placeholder="Salary..." />
-            <input type="text" placeholder="Link for listing..." />
+            <input type="text" placeholder="Company..." required />
+            <input type="text" placeholder="Role..." required />
+            <input type="text" placeholder="Salary..." required />
+            <input type="text" placeholder="Link for listing..." required />
 
             <button type="submit">Submit</button>
           </form>
