@@ -36,6 +36,7 @@
   height: 60px;
   box-shadow: 1px 1px 7px black;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .job-mini .job-company {

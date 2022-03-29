@@ -2,9 +2,29 @@ import "../../Assets/Stylesheets/Job.css";
 
 const Job = ({ id, company, role, pay, link, mini, setJobs }) => {
   const handleDoubleClick = () => {
-    fetch(`http://localhost:3000/jobs/${id}`, { method: "DELETE" }).then(() => {
-      setJobs((old) => old.filter((job) => job.id !== id));
-    });
+    if (mini) {
+      const headers = new Headers([["Content-Type", "application/json"]]);
+
+      fetch(`http://localhost:3000/jobs/${id}`, {
+        method: "PATCH",
+        body: JSON.stringify({ job: { status: "NEW" } }),
+        headers,
+      }).then(() => {
+        setJobs((old) => {
+          const stateCopy = [...old];
+          const item = stateCopy.find((job) => job.id === id);
+          item.status = "NEW";
+
+          return stateCopy;
+        });
+      });
+    } else {
+      fetch(`http://localhost:3000/jobs/${id}`, { method: "DELETE" }).then(
+        () => {
+          setJobs((old) => old.filter((job) => job.id !== id));
+        }
+      );
+    }
   };
 
   const handleDrag = (e) => {
@@ -14,6 +34,14 @@ const Job = ({ id, company, role, pay, link, mini, setJobs }) => {
       method: "PATCH",
       body: JSON.stringify({ job: { status: "ACTIVE" } }),
       headers,
+    }).then(() => {
+      setJobs((old) => {
+        const stateCopy = [...old];
+        const item = stateCopy.find((job) => job.id === id);
+        item.status = "ACTIVE";
+
+        return stateCopy;
+      });
     });
   };
 

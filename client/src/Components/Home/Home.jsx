@@ -26,7 +26,7 @@ const Home = () => {
   return (
     <>
       <Jobs jobs={jobs} setJobs={setJobs} loading={loading} />
-      <ActiveJobs activeJobs={activeJobs} loading={loading} />
+      <ActiveJobs activeJobs={activeJobs} setJobs={setJobs} loading={loading} />
       <JobButton setViewModal={setViewModal} />
       {viewModal && <JobModal setViewModal={setViewModal} setJobs={setJobs} />}
     </>
