@@ -20,6 +20,16 @@ class JobsController < ApplicationController
     end
   end
 
+  def update
+    @job = Job.find(params[:id])
+
+    if @job.update(job_params)
+      render json: @job
+    else
+      render json: @job.errors.full_messages
+    end
+  end
+
   def destroy
     @job = Job.find(params[:id])
 
