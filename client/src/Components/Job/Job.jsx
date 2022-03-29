@@ -10,7 +10,7 @@ const Job = ({ id, company, role, pay, link, mini, setJobs }) => {
   const handleDrag = (e) => {
     fetch(`http://localhost:3000/jobs/${id}`, {
       method: "PATCH",
-      body: JSON.stringify({ status: "ACTIVE" }),
+      body: JSON.stringify({ job: { status: "ACTIVE" } }),
     });
   };
 
