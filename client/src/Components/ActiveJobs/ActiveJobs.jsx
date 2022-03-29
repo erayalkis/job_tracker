@@ -1,5 +1,4 @@
 import "../../Assets/Stylesheets/ActiveJobs.css";
-import { useState, useEffect } from "react";
 import Job from "../Job/Job";
 
 const ActiveJobs = ({ activeJobs, loading }) => {
