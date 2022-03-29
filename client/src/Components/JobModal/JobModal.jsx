@@ -16,7 +16,7 @@ const JobModal = ({ setViewModal, setJobs }) => {
 
     const headers = new Headers([["Content-Type", "application/json"]]);
 
-    fetch("http://localhost:3000/jobs", {
+    fetch("https://job-tracker-backendio.herokuapp.com//jobs", {
       method: "POST",
       body: JSON.stringify(job_data),
       headers,
