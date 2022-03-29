@@ -5,7 +5,7 @@ const Job = ({ id, company, role, pay, link, mini, setJobs }) => {
     if (mini) {
       const headers = new Headers([["Content-Type", "application/json"]]);
 
-      fetch(`https://job-tracker-backendio.herokuapp.com//jobs/${id}`, {
+      fetch(`https://job-tracker-backendio.herokuapp.com/jobs/${id}`, {
         method: "PATCH",
         body: JSON.stringify({ job: { status: "NEW" } }),
         headers,
@@ -19,7 +19,7 @@ const Job = ({ id, company, role, pay, link, mini, setJobs }) => {
         });
       });
     } else {
-      fetch(`https://job-tracker-backendio.herokuapp.com//jobs/${id}`, {
+      fetch(`https://job-tracker-backendio.herokuapp.com/jobs/${id}`, {
         method: "DELETE",
       }).then(() => {
         setJobs((old) => old.filter((job) => job.id !== id));
@@ -30,7 +30,7 @@ const Job = ({ id, company, role, pay, link, mini, setJobs }) => {
   const handleDrag = (e) => {
     const headers = new Headers([["Content-Type", "application/json"]]);
 
-    fetch(`https://job-tracker-backendio.herokuapp.com//jobs/${id}`, {
+    fetch(`https://job-tracker-backendio.herokuapp.com/jobs/${id}`, {
       method: "PATCH",
       body: JSON.stringify({ job: { status: "ACTIVE" } }),
       headers,

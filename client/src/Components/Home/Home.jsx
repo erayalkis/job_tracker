@@ -15,7 +15,7 @@ const Home = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("https://job-tracker-backendio.herokuapp.com//jobs")
+    fetch("https://job-tracker-backendio.herokuapp.com/jobs")
       .then((res) => res.json())
       .then((res) => {
         setJobs(res);
