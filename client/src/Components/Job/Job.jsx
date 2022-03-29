@@ -8,9 +8,12 @@ const Job = ({ id, company, role, pay, link, mini, setJobs }) => {
   };
 
   const handleDrag = (e) => {
+    const headers = new Headers([["Content-Type", "application/json"]]);
+
     fetch(`http://localhost:3000/jobs/${id}`, {
       method: "PATCH",
       body: JSON.stringify({ job: { status: "ACTIVE" } }),
+      headers,
     });
   };
 
