@@ -30,8 +30,13 @@
 }
 
 .job-modal-close {
-  text-align: right;
+  position: absolute;
+  right: 30px;
   cursor: pointer;
+}
+
+.job-form-container {
+  margin-top: 20px;
 }
 
 .job-form {
