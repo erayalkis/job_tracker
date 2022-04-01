@@ -10,7 +10,8 @@ const JobModal = ({ viewModal, setViewModal, setJobs }) => {
         company: targets[0].value,
         role: targets[1].value,
         pay: targets[2].value,
-        link: targets[3].value,
+        rating: targets[3].value,
+        link: targets[4].value,
       },
     };
 
