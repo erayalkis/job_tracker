@@ -2,7 +2,7 @@
 
 # Job Tracking App
 
-Welcome! Jobify is a personal app for keeping track of job listings.
+Welcome! Jobify is a personal app for keeping track of job listings that I threw together in like a day. It's nothing special but, it makes the job search easier!
 
 # Sites that I use for my job search:
 
