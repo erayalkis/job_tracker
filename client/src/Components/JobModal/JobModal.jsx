@@ -27,7 +27,6 @@ const JobModal = ({ viewModal, setViewModal, setJobs }) => {
           targets[i].value = "";
         }
 
-        console.log(res.json());
         return res.json();
       })
       .then((res) => setJobs((old) => [...old, res]));
