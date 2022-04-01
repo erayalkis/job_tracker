@@ -46,6 +46,7 @@ const JobModal = ({ viewModal, setViewModal, setJobs }) => {
             <input type="text" placeholder="Company..." required />
             <input type="text" placeholder="Role..." required />
             <input type="text" placeholder="Salary..." required />
+            <input type="text" placeholder="Rating... (Out of 10)" required />
             <input type="text" placeholder="Link for listing..." required />
 
             <button type="submit">Submit</button>
