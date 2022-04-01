@@ -1,6 +1,6 @@
 import "../../Assets/Stylesheets/JobModal.css";
 
-const JobModal = ({ setViewModal, setJobs }) => {
+const JobModal = ({ viewModal, setViewModal, setJobs }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const targets = [...e.currentTarget.children];
@@ -34,13 +34,14 @@ const JobModal = ({ setViewModal, setJobs }) => {
   const handleClick = () => setViewModal((old) => false);
 
   return (
-    <div className="job-modal">
+    <div className={`job-modal${viewModal ? " active" : ""}`}>
       <div className="job-modal-content">
         <h1 className="job-modal-close" onClick={handleClick}>
           X
         </h1>
-        <h1>Add a new job:</h1>
         <div className="job-form-container">
+          <h1>Add a new job:</h1>
+
           <form className="job-form" onSubmit={handleSubmit}>
             <input type="text" placeholder="Company..." required />
             <input type="text" placeholder="Role..." required />
