@@ -16,16 +16,16 @@
 .job-modal-content {
   background-color: #fefefe;
   position: fixed;
-  top: 150px;
+  top: 0;
   left: 200px;
   padding: 20px;
   border: 1px solid #888;
   width: 50%;
   height: 50%;
   text-align: center;
-  animation-name: fade-in;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
+  transition: top;
+  transition-duration: 1s;
+  transition-timing-function: ease-out;
 }
 
 .job-modal-close {
@@ -60,4 +60,8 @@
 .job-modal.active {
   opacity: 100%;
   visibility: visible;
+}
+
+.job-modal.active .job-modal-content {
+  top: 150px;
 }
