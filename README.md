@@ -9,7 +9,6 @@ Welcome! Jobify is a personal app for keeping track of job listings that I threw
 * [arc.dev](https://arc.dev/)
 * [AngelList](https://angel.co/)
 * [AuthenticJobs](https://authenticjobs.com/)
-* [StackOverflow](https://stackoverflow.com/jobs)
 * [CwJobs](https://www.cwjobs.co.uk/)
 * [WhiteTruffle](https://whitetruffle.com/)
 * [Dice](https://www.dice.com/)
