@@ -12,7 +12,6 @@ Welcome! Jobify is a personal app for keeping track of job listings that I threw
 * [CwJobs](https://www.cwjobs.co.uk/)
 * [WhiteTruffle](https://whitetruffle.com/)
 * [Dice](https://www.dice.com/)
-* [UnderDog](https://underdog.io/)
 * [WorkAtAStartup](https://www.workatastartup.com/)
 * [HubstaffTalent](https://talent.hubstaff.com/)
 * [RemoteOK](https://remoteok.com/)
